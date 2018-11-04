@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Time B..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/app.js/"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+       
+        <script type="text/javascript">window.onload = CreateTimer("timer", 30);</script>
+    <div class="content">
+
+        <h1> Trivia Thyme!</h1>
+
+        <p>Click the button and you have 30 seconds, then alert "Good Job!".</p>
+
+<button onclick="myFunction()">Do your besttttt</button>
+
+<script>
+function 
+
+myFunction() {
+    setTimeout(function(){ alert("Good TRY!"); }, 30000);
+}
+</script>
+
+
+        <div style="overflow: auto; width:700px; height:400px;">
+
+            <form id="form1">
+
+                <h2>What opens, closes, is part of your body & can speak louder than words?</h2>
+                <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Fists</label>
+                <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Mouth</label>
+                <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Eyes</label>
+
+
+                <h2>What takes up a lot of space, convenient, and used daily? </h2>
+                <label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string" />Bus</label>
+                <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join" />Tree</label>
+                <label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Water canteen</label>
+
+                <h2> If you pet me you will be fine, but if you pet me fast you will bleed.. you wont be able to resist.. </h2>
+                <label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Cactus</label>
+                <label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />Paper</label>
+                <label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Rose</label>
+
+
+                <h2>I come to you most when darkness shines, I leave a mark, but you usually leave it behind.. </h2>
+                <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Dreams</label>
+                <label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />Sleep</label>
+                <label for="if_info"><input type="radio" name="ifstate" value="25" id="if_info" />Flashlight</label>
+
+                <h2>I am never gone nor leaving</h2>
+                <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Traffic</label>
+                <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Time</label>
+                <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />River</label>
+
+
+                
+
+                <p>
+                    <button type="submit" size="30" value="Submit">Submit</button>
+                </p>
+            </form>
+            
+            <p>Your result is: <span id="grade">__</span></p>
+            <p id="grade2"></p>
+
+
+            <script>
+                    
+                    </script>
+                    
+                    <script>
+                            document.getElementById("form1").onsubmit=function() {
+                                   variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+                                   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+                                   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+                                   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+                                   
+                                   
+                                   result = variable + sub + con + ifstate;
+                                   
+                                document.getElementById("grade").innerHTML = result;
+                                   
+                            
+                            
+                            return false; // required to not refresh the page; just leave this here
+                            } //this ends the submit function
+                            
+                            </script>          
+     </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
